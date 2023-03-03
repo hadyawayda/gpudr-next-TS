@@ -1,0 +1,257 @@
+.footer-wrapper {
+  background-image: linear-gradient(to top, grey, lightgray);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.footer-upper-section {
+  padding: 40px 24px 0 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-lower-section {
+  display: flex;
+  justify-content: center;
+  padding: 6px 24px;
+  border-top: 1px solid #33463f;
+}
+
+.footer-upper-section-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.footer-lower-section-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  flex: 1;
+  min-height: 100px;
+}
+
+.text-wrapper-rights {
+  margin: 10px 0vw;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+.image-wrapper {
+  height: 50px;
+  width: 50px;
+}
+
+.contact-links-1 {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-us-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 142px;
+}
+
+#contact-us {
+  margin: 1px 0px 0px 0px;
+}
+
+#email-logo {
+  margin: 0px 0px 0px 0px;
+  width: 21px;
+  height: 21px;
+}
+
+.top-wrapper {
+  width: 50%;
+  max-width: 270px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+  width: 20%;
+}
+
+.back-to-top {
+  font-size: 14px;
+  margin-right: 14px;
+  background-color: transparent;
+  padding: 15px 30px;
+  border: 2px solid rgb(136, 136, 136, 0.4);
+  border-radius: 40px;
+  color: rgb(33, 55, 55);
+}
+
+.terms-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  flex-grow: 1;
+  width: 20%;
+  max-width: 270px;
+}
+
+.logo-wrapper,
+.index-wrapper,
+.support-wrapper,
+.help-wrapper {
+  width: 50%;
+}
+
+.socials-3 {
+  display: none;
+}
+
+.socials-1 {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  border-bottom: 1px solid #121816;
+}
+
+.copyright-wrapper,
+.terms-of-use-wrapper {
+  font-size: 13px;
+  font-family: Helvetica Neue, Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: rgb(15, 25, 25);
+}
+
+.copyright-wrapper,
+.terms-of-use-wrapper,
+.contact-us-wrapper {
+  margin: 0;
+}
+
+.terms-of-use-wrapper > a {
+  text-decoration: none;
+  color: inherit;
+  margin-right: 20px;
+}
+
+.index-wrapper,
+.support-wrapper,
+.help-wrapper {
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+
+.index-wrapper > p,
+.support-wrapper > p,
+.help-wrapper > p,
+.contact-us {
+  font-size: 16px;
+  margin: 0;
+  padding-bottom: 18px;
+}
+
+#mail-in {
+  padding: 0px;
+}
+
+.headings {
+  padding-bottom: 5px;
+}
+
+#need-help {
+  padding-bottom: 4px;
+}
+
+@media (min-width: 768px) {
+  .footer-upper-section {
+    padding: 56px 24px;
+  }
+  .footer-lower-section {
+    padding: 4px 24px 6px 24px;
+  }
+  .footer-upper-section-wrapper,
+  .footer-lower-section-wrapper {
+    flex-wrap: nowrap;
+    flex-grow: 1;
+  }
+  .back-to-top {
+    margin-right: 24px;
+  }
+  .footer-lower-section-wrapper {
+    min-height: 100px;
+  }
+  .socials-3 {
+    display: flex;
+  }
+  .socials-1 {
+    display: none;
+  }
+  .headings {
+    padding-bottom: 20px;
+  }
+  .index-wrapper,
+  .support-wrapper,
+  .help-wrapper {
+    margin-bottom: 5px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-upper-section-wrapper,
+  .footer-lower-section-wrapper {
+    width: 90%;
+    max-width: 1050px;
+  }
+  .footer-lower-section {
+    padding: 0px 24px 6px 24px;
+    border: none;
+  }
+  .footer-lower-section-wrapper {
+    border-top: 1px solid #121816;
+    min-height: 140px;
+  }
+  .footer-upper-section {
+    padding-bottom: 70px;
+    padding-top: 70px;
+  }
+  .terms-wrapper {
+    flex-direction: row;
+  }
+  .logo-wrapper {
+    width: 45%;
+  }
+  .index-wrapper {
+    width: 18%;
+  }
+  .support-wrapper,
+  .help-wrapper {
+    width: 20%;
+  }
+  .headings {
+    padding-bottom: 20px;
+  }
+  .index-wrapper > p,
+  .support-wrapper > p,
+  .help-wrapper > p,
+  .contact-us {
+    padding-bottom: 22px;
+    margin: 0;
+  }
+  .index-wrapper,
+  .support-wrapper,
+  .help-wrapper {
+    margin-bottom: 0px;
+  }
+  .back-to-top {
+    margin-right: 40px;
+  }
+}

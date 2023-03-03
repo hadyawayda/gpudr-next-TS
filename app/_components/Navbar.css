@@ -1,0 +1,233 @@
+@font-face {
+  font-family: 'Inter var';
+  src: url('../../public/Fonts/Inter/Inter-var.ttf'), format('trueType');
+  font-weight: 600;
+}
+
+:root {
+  --padding1: 0px;
+  --padding2: 50px;
+}
+
+.header {
+  box-sizing: border-box;
+  position: absolute;
+  max-width: 85rem;
+  width: 100%;
+  height: 92px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  z-index: 50;
+}
+
+.navbar {
+  box-sizing: border-box;
+  position: relative;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-grow: 1;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.flex-container {
+  box-sizing: border-box;
+  position: relative;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-grow: 0;
+  flex: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+.image-wrapper {
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  margin-right: var(--padding1);
+}
+
+.image-container {
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+}
+
+.menu-links {
+  box-sizing: border-box;
+  position: relative;
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: var(--padding2);
+}
+
+.search {
+  box-sizing: border-box;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: block;
+  background: none;
+  border: none;
+}
+
+.search-logo {
+  box-sizing: border-box;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  fill: #111827;
+}
+
+.hamburger-menu {
+  box-sizing: border-box;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 24px;
+  background: none;
+  border: none;
+  padding: 0 0 3px 0;
+}
+
+.hamburger-logo {
+  box-sizing: border-box;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: block;
+  padding: 0px;
+  stroke: #0f172a;
+}
+
+.sign-in-wrapper {
+  box-sizing: border-box;
+  display: none;
+  align-items: center;
+  position: relative;
+  height: 32px;
+  padding-left: 32px;
+  border-left: 1px solid rgba(15, 23, 42, 0.15);
+  height: 24px;
+}
+
+.menu-links > a,
+.menu-links > div,
+.sign-in-link,
+.cart {
+  text-decoration: none;
+  font-weight: 600;
+  font-family: Inter var;
+  font-size: 15px;
+  line-height: 24px;
+  color: #111827;
+}
+
+.menu-links > a:nth-of-type(2),
+.menu-links > a:nth-of-type(3),
+.search,
+.sign-in-wrapper,
+.cart-wrapper {
+  margin-left: 32px;
+}
+
+.menu-links > div {
+  margin-left: 8px;
+  background-color: rgb(14, 165, 233);
+  border-radius: 999px;
+  padding: 2px 6px;
+  color: white;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.cart-wrapper {
+  box-sizing: border-box;
+  position: relative;
+  width: 76px;
+  padding: 0 9px;
+  height: 34px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: rgb(26, 133, 104);
+  border-radius: 8px;
+  top: 12px;
+  z-index: -1;
+}
+
+.cart {
+  color: white;
+  font-size: 14px;
+}
+
+.cart-items-counter {
+  position: relative;
+  color: white;
+  z-index: 0;
+  background-color: rgb(12, 183, 217);
+  width: 20px;
+  height: 20px;
+  font-size: 11px;
+  font-family: Inter var;
+  line-height: 20px;
+  border-radius: 50%;
+  left: 96px;
+  top: 2px;
+}
+
+.cart-logo {
+  box-sizing: border-box;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.cart-wrapper-outer {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    padding: 0 2rem;
+  }
+  .menu-links,
+  .sign-in-wrapper,
+  .cart-wrapper {
+    display: flex;
+    box-sizing: border-box;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 0 2rem;
+  }
+}

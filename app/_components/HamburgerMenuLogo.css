@@ -1,0 +1,47 @@
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.a,.b,.c {
+    position: relative;
+    width: 30px;
+    height: 4px;
+    border-radius: 5px;
+    background: #000;
+    margin: 10px 0 0 0;
+}
+
+.b {
+    transition: all .5s cubic-bezier(0.215, 0.610, 0.355, 1);
+    margin: 20px 0 0 0;
+}
+
+.c {
+    margin: 30px 0 0 0;
+}
+
+.a,.c {
+    position: absolute;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu-btn.open .b {
+    transform: translateX(-50px);
+    background: transparent;
+}
+
+.menu-btn.open .a {
+    transform: rotate(45deg) translate(35px, -35px);
+    transform: translateY(-16px);
+}
+
+.menu-btn.open .c{
+    transform: rotate(-45deg) translate(35px, 35px);
+    transform: translateY(16px);
+}
