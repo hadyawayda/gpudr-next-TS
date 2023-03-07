@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Inter var';
+  font-family: 'Inter';
   src: url('../../public/Fonts/Inter/Inter-var.ttf'), format('trueType');
   font-weight: 600;
 }
@@ -11,7 +11,7 @@
 
 .header {
   box-sizing: border-box;
-  position: absolute;
+  position: relative;
   max-width: 85rem;
   width: 100%;
   height: 92px;
@@ -62,7 +62,7 @@
 .image-container {
   box-sizing: border-box;
   width: 60px;
-  height: 60px;
+  height: 50px;
 }
 
 .menu-links {
@@ -134,7 +134,7 @@
 .cart {
   text-decoration: none;
   font-weight: 600;
-  font-family: Inter var;
+  font-family: Inter;
   font-size: 15px;
   line-height: 24px;
   color: #111827;
@@ -164,7 +164,7 @@
   width: 76px;
   padding: 0 9px;
   height: 34px;
-  display: none;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
@@ -187,7 +187,7 @@
   width: 20px;
   height: 20px;
   font-size: 11px;
-  font-family: Inter var;
+  font-family: Inter;
   line-height: 20px;
   border-radius: 50%;
   left: 96px;
@@ -206,6 +206,7 @@
 }
 
 .cart-wrapper-outer {
+  display: none;
   padding: 0;
   background-color: transparent;
   border: none;
@@ -216,13 +217,15 @@
     padding: 0 2rem;
   }
   .menu-links,
-  .sign-in-wrapper,
-  .cart-wrapper {
+  .sign-in-wrapper {
     display: flex;
     box-sizing: border-box;
   }
   .hamburger-menu {
     display: none;
+  }
+  .cart-wrapper-outer {
+    display: block;
   }
 }
 

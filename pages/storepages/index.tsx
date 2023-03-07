@@ -8,7 +8,7 @@ import './Product.css'
 import { useState } from 'react'
 import { createClient } from '@supabase/supabase-js'
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const supabaseAdmin = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL || '',
     process.env.SUPABASE_SERVICE_ROLE_KEY || ''
@@ -17,7 +17,7 @@ export async function getStaticProps() {
     .from('Products')
     .select('*')
     .order('id')
-  
+  console.log(data)
   return {
     props: {
       products: data,
@@ -37,9 +37,9 @@ type Product = {
   description: string
 }
 
-export default function Products({ products }: { products: Product[] }) {
+export default function ProductsPages({ products }: { products: Product[] }) {
   // const products = await getProducts();
-  console.log(Product)
+  // console.log(Product)
   return (
     <>
       <Navbar />
@@ -47,7 +47,7 @@ export default function Products({ products }: { products: Product[] }) {
         <h1 className="mb-8">Products List:</h1>
         <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {products?.map((product) => 
-            <Product key={product.id} product={product} />
+            <Productpage key={product.id} product={product} />
           )}
           {/* <Product /> */}
         </div>
@@ -57,7 +57,7 @@ export default function Products({ products }: { products: Product[] }) {
   )
 }
 
-function Product({product}: {product: Product}) {
+function Productpage({product}: {product: Product}) {
   const [isLoading, setLoading] = useState(true)
   
   return (
@@ -79,9 +79,9 @@ function Product({product}: {product: Product}) {
       <div className='mt-4 flex grow justify-between'>
         <div className='flex flex-col'>
           <h3 className="text-lg font-medium text-gray-700">{product.name}</h3>
-          <p className="mt-1 max-width leading-tight text-sm font-light text-gray-500">{product.description}</p>
+          <p id='description' className="mt-1 max-width leading-tight text-sm font-light text-gray-500">{product.description}</p>
         </div>
-        <p className='mt-1 whitespace-nowrap text-gray-700 font-normal min-width'>${product.price}</p>
+        <p className='mt-1 pl-4 whitespace-nowrap text-gray-700 font-normal min-width'>${product.price}</p>
       </div>
     </Link>
   )

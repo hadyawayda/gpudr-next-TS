@@ -39,10 +39,10 @@ const Footer = () => {
                             <h4 className='headings' id="need-help">Need Help?</h4>
                             <div className='contact-us-wrapper'>
                                 <p className='contact-us' id='contact-us'>Contact Us </p>
-                                <Link rel="noreferrer" target="_blank" href="https://wa.me/96176941100">
+                                <Link rel="noreferrer" className=' ml-2' target="_blank" href="https://wa.me/96176941100">
                                     <Image className="contact-links-1" alt="WhatsApp" src={require("../../public/Images/WhatsApp.svg").default}/>
                                 </Link>
-                                <Link rel="noreferrer" target="_blank" href="mailto:hady_awayda@hotmail.com" >
+                                <Link rel="noreferrer" className='' target="_blank" href="mailto:hady_awayda@hotmail.com" >
                                     <Image id='email-logo' alt="Email" src={require("../../public/Images/Email.svg").default}/>
                                 </Link>
                             </div>

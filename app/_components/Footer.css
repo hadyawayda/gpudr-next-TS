@@ -1,7 +1,18 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../../public/Fonts/Inter/Inter-var.ttf'), format('trueType');
+}
+
 .footer-wrapper {
-  background-image: linear-gradient(to top, grey, lightgray);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255),
+    rgb(231, 235, 240)
+  );
   width: 100%;
   display: flex;
+  font-family: Inter;
+  font-weight: 300;
   flex-direction: column;
   justify-content: flex-start;
 }
@@ -16,7 +27,7 @@
   display: flex;
   justify-content: center;
   padding: 6px 24px;
-  border-top: 1px solid #33463f;
+  border-top: 0.74px solid rgb(194, 203, 214);
 }
 
 .footer-upper-section-wrapper {
@@ -68,7 +79,7 @@
 }
 
 #contact-us {
-  margin: 1px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
 #email-logo {
@@ -88,10 +99,11 @@
 }
 
 .back-to-top {
-  font-size: 14px;
+  font-size: 12px;
   margin-right: 14px;
   background-color: transparent;
-  padding: 15px 30px;
+  padding: 12px 24px;
+  font-weight: 400;
   border: 2px solid rgb(136, 136, 136, 0.4);
   border-radius: 40px;
   color: rgb(33, 55, 55);
@@ -121,13 +133,13 @@
   display: flex;
   justify-content: center;
   padding: 40px;
-  border-bottom: 1px solid #121816;
+  border-bottom: 1px solid rgb(213, 219, 226);
 }
 
 .copyright-wrapper,
 .terms-of-use-wrapper {
-  font-size: 13px;
-  font-family: Helvetica Neue, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 300;
   color: rgb(15, 25, 25);
 }
 
@@ -154,7 +166,7 @@
 .support-wrapper > p,
 .help-wrapper > p,
 .contact-us {
-  font-size: 16px;
+  font-size: 13px;
   margin: 0;
   padding-bottom: 18px;
 }
@@ -164,13 +176,10 @@
 }
 
 .headings {
-  padding-bottom: 5px;
+  padding-bottom: 15px;
+  font-size: 15px;
+  font-weight: 600;
 }
-
-#need-help {
-  padding-bottom: 4px;
-}
-
 @media (min-width: 768px) {
   .footer-upper-section {
     padding: 56px 24px;
@@ -216,7 +225,7 @@
     border: none;
   }
   .footer-lower-section-wrapper {
-    border-top: 1px solid #121816;
+    border-top: 0.74px solid rgb(194, 203, 214);
     min-height: 140px;
   }
   .footer-upper-section {
@@ -235,9 +244,6 @@
   .support-wrapper,
   .help-wrapper {
     width: 20%;
-  }
-  .headings {
-    padding-bottom: 20px;
   }
   .index-wrapper > p,
   .support-wrapper > p,
