@@ -55,7 +55,7 @@ const Footer = () => {
                     <div className="footer-lower-section-wrapper">
                         <div className='terms-wrapper'>
                             <p className='copyright-wrapper'>2023 © GPU Doctor</p>
-                            <p className='terms-of-use-wrapper'><Link href="https://www.gpudoctor.com/terms">Terms of use</Link></p>
+                            <p className='terms-of-use-wrapper'><Link href="https://www.gpudoctor.com/terms" >Terms of use</Link></p>
                         </div>
                         <div className="socials-3">
                             <Logos/>
