@@ -15,6 +15,8 @@
   font-weight: 300;
   flex-direction: column;
   justify-content: flex-start;
+  border-top: 1px solid rgb(224, 228, 232);
+  margin-top: 150px;
 }
 
 .footer-upper-section {
@@ -133,7 +135,7 @@
   display: flex;
   justify-content: center;
   padding: 40px;
-  border-bottom: 1px solid rgb(213, 219, 226);
+  border-bottom: 1px solid rgb(224, 228, 232);
 }
 
 .copyright-wrapper,
@@ -180,6 +182,7 @@
   font-size: 15px;
   font-weight: 600;
 }
+
 @media (min-width: 768px) {
   .footer-upper-section {
     padding: 56px 24px;

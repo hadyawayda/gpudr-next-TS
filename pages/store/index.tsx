@@ -8,7 +8,7 @@ import './Product.css'
 import { useState } from 'react'
 import { createClient } from '@supabase/supabase-js'
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const supabaseAdmin = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL || '',
     process.env.SUPABASE_SERVICE_ROLE_KEY || ''
@@ -61,7 +61,7 @@ function Productpage({product}: {product: Product}) {
   const [isLoading, setLoading] = useState(true)
   
   return (
-    <Link href={`/products/${product.id}`} className="group">
+    <Link href={`/store/productdetails/${product.id}`} className="group">
       <div className="aspect-w-1 aspect-h-1 xl:aspect-w-7 xl:aspect-h-8 w-full overflow-hidden rounded-lg bg-gray-400">
         <Image
           alt=""

@@ -28,14 +28,14 @@ const Header = () => {
     return ( <>
         <header className='header'>
             <nav className="navbar">
-                <Link className='image-wrapper' href="https://gpudoctor.com" alt='main'>
+                <Link className='image-wrapper' href="/" alt='main'>
                     <Image className='image-container' alt="gpu logo" src={require("../../public/Images/gpu.jpg")}/>
                 </Link>
                 <div className='wrap-1'></div>
                 <div className="menu-links">
                     <Link href="/Services">Services</Link>
                     {/**add menu on hover*/}
-                    <Link href="/Store">Store</Link>
+                    <Link href="/store">Store</Link>
                     <div>New</div>
                     <Link className='whitespace-nowrap' href="/Mail-In">Mail In Form</Link>
                 </div>
@@ -62,7 +62,7 @@ const Header = () => {
                             <Image className='cart-logo' alt="cart logo" src={require("../../public/Images/Cart.svg").default}/>
                             <p className='cart'>Cart</p>
                         </div>
-                        <div className="cart-items-counter">14</div>
+                        <div className="cart-items-counter">99</div>
                     </button>
                 </div>
             </nav>
