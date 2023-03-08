@@ -24,18 +24,41 @@ export async function getServerSideProps() {
 
 export default function ProductPage(data: any) {
   
-  const [count, setCount] = useState<number>(0);
+  const [count, setCount] = useState<number>(1);
   const router = useRouter();
   const { id } = router.query as { id: string };
   const product = data?.products?.find((p:any) => p.id === Number(id)) ?? null;
-  const { name, description, imageUrl, category, brand, price, stock, longName, longDescription} = product ?? {};
+  const { name, description, imageUrl, category, brand, price, stock, longName, longDescription } = product ?? {};
+  
+  let intervalId:any = null;
 
   function handleIncrementClick() {
-    setCount(count + 1)
-  }
+    if (count >= 0) {
+      let intervalId = setInterval(() => {
+        setCount(count => Number(count) + 1)
+        }, 100)
+      const handleMouseUp = () => {
+        clearInterval(intervalId)
+      }
+      window.addEventListener('mouseup', handleMouseUp)
+      window.addEventListener('touchend', handleMouseUp)
+    }
+    }
 
   function handleDecrementClick() {
-    setCount(count - 1) 
+  if (count > 0) {
+    setCount(count => Math.max(Number(count) - 1, 1))
+
+    let intervalId:any = null;
+    intervalId = setInterval(() => {
+      setCount(count => Math.max(Number(count) - 1, 1))
+    }, 100)
+    const handleMouseUp = () => {
+      clearInterval(intervalId)
+    }
+    window.addEventListener('mouseup', handleMouseUp)
+    window.addEventListener('touchend', handleMouseUp)
+    }
   }
 
   function handleAddToCart() {
@@ -105,15 +128,27 @@ export default function ProductPage(data: any) {
                   </div>
               }
             </div>
-            <div>
-              <div>
-                <select></select>
+            <div className="mb-8 flex items-center flex-col">
+              <div className="mb-8 flex justify-between w-24">
+                <button className="bg-emerald-200 w-7 px-2 py-0 rounded-sm" disabled={count === 1} onMouseDown={handleDecrementClick} onTouchStart={handleDecrementClick} onMouseUp={() => clearInterval(intervalId)} onTouchEnd={() => clearInterval(intervalId)}>
+                  -
+                </button>
+                <input value={count} min={1} onChange={e => setCount(parseInt(e.target.value) || 1)} type="number" className="w-8 mx-2 rounded-sm text-center bg-sky-200" />
+                <button className="bg-orange-400 w-7 px-2 rounded-sm" onMouseDown={handleIncrementClick} onTouchStart={handleIncrementClick} onMouseUp={() => clearInterval(intervalId)} onTouchEnd={() => clearInterval(intervalId)}>
+                  +
+                </button>
+              </div>
+              <div className="flex justify-between w-28 mb-8">
+                <div>
+                  Total
+                </div>
+                <div>$ {parseInt(price) * count}</div>
               </div>
               <div className="mb-8 flex justify-center">
-                <button onClick={handleAddToCart} className="bg-orange-400 rounded-lg text-slate-600 py-2.5 px-6">Add To Cart</button>
+                <button onClick={handleAddToCart} className="bg-amber-500 rounded-lg text-slate-600 py-2.5 px-6">Add To Cart</button>
               </div>
               <div className="mb-8 flex justify-center">
-                <button onClick={handleBuyNow} className="bg-lime-400 rounded-lg text-slate-600 py-2.5 px-6">Buy Now</button>
+                <button onClick={handleBuyNow} className="bg-amber-400 rounded-lg text-slate-600 py-2.5 px-6">Buy Now</button>
               </div>
             </div>
           </div>
