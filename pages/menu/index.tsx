@@ -1,9 +1,9 @@
-import Menu from './HamburgerMenuLogo'
+import Navbar from '@/app/_components/Navbar';
 
 function HamMenu() {
   return (
-    <div className="flex justify-center items-center mt-40">
-      <Menu />
+    <div>
+      <Navbar />
     </div>
   )
 }

@@ -100,7 +100,7 @@ export default function ProductPage(data: any) {
             <h1 className="mb-12 lg:hidden">{name}</h1>
             <Image className="mb-20 max-w-2xl rounded-lg" src={imageUrl} alt={description} width={320} height={320} />
           </div>
-          <div className="w-80 lg:ml-4 flex justify-start flex-col">
+          <div className="hidden w-80 lg:ml-4 lg:flex justify-start flex-col">
             <div>
               <h1>{name}</h1>
               <h1>{longName}</h1>
@@ -112,7 +112,7 @@ export default function ProductPage(data: any) {
               {longDescription}
             </div>
           </div>
-          <div className="max-w-sm px-4 py-2 rounded-lg bg-slate-200 lg:ml-4 flex justify-between items-center flex-col">
+          <div className="hidden max-w-sm px-4 py-2 rounded-lg bg-slate-200 lg:ml-4 lg:flex justify-between items-center flex-col">
             <div className="mt-4 w-44">
               <h2>$ {price} </h2>
             </div>
@@ -162,12 +162,16 @@ export default function ProductPage(data: any) {
           <div className='flex justify-between items-center mt-2 lg:hidden'>
             <div className="flex justify-between flex-col">Quantity:
               <div className="w-24 flex justify-between">
-                <button className="bg-emerald-200 w-7 px-2 rounded-sm" disabled={count===0} onClick={handleDecrementClick}>
-                  -
+                <button className=" w-7 px-0 pb-0 rounded-sm" disabled={count === 1} onMouseDown={handleDecrementClick} onTouchStart={handleDecrementClick} onMouseUp={() => clearInterval(intervalId)} onTouchEnd={() => clearInterval(intervalId)}>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="rgba(156,223,212)" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                 </button>
-                {count}
-                <button className="bg-orange-400 w-7 px-2 rounded-sm" onClick={handleIncrementClick}>
-                  +
+                <input value={count} min={1} onChange={e => setCount(parseInt(e.target.value) || 1)} type="number" className="w-8 mx-2 rounded-sm text-center bg-sky-200" />
+                <button className="w-7 pb-0 px-0 rounded-sm" onMouseDown={handleIncrementClick} onTouchStart={handleIncrementClick} onMouseUp={() => clearInterval(intervalId)} onTouchEnd={() => clearInterval(intervalId)}>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="rgba(242,223,212)" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                 </button>
               </div>
             </div>

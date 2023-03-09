@@ -10,7 +10,6 @@
 }
 
 .header {
-  box-sizing: border-box;
   position: relative;
   max-width: 85rem;
   width: 100%;
@@ -25,7 +24,6 @@
 }
 
 .navbar {
-  box-sizing: border-box;
   position: relative;
   height: 92px;
   display: flex;
@@ -39,7 +37,6 @@
 }
 
 .flex-container {
-  box-sizing: border-box;
   position: relative;
   height: 92px;
   display: flex;
@@ -53,20 +50,17 @@
 }
 
 .image-wrapper {
-  box-sizing: border-box;
   width: 60px;
   height: 60px;
   margin-right: var(--padding1);
 }
 
 .image-container {
-  box-sizing: border-box;
   width: 60px;
   height: 60px;
 }
 
 .menu-links {
-  box-sizing: border-box;
   position: relative;
   display: none;
   align-items: center;
@@ -75,17 +69,18 @@
 }
 
 .search {
-  box-sizing: border-box;
   position: relative;
-  width: 32px;
-  height: 32px;
-  display: block;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: none;
   border: none;
+  z-index: -1;
 }
 
 .search-logo {
-  box-sizing: border-box;
   position: relative;
   width: 24px;
   height: 24px;
@@ -93,7 +88,6 @@
 }
 
 .hamburger-menu {
-  box-sizing: border-box;
   position: relative;
   width: 32px;
   height: 32px;
@@ -101,14 +95,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  margin-left: 24px;
-  background: none;
-  border: none;
-  padding: 0 0 3px 0;
+  margin-left: 20px;
+  z-index: 101;
 }
 
 .hamburger-logo {
-  box-sizing: border-box;
   position: relative;
   width: 24px;
   height: 24px;
@@ -118,7 +109,6 @@
 }
 
 .sign-in-wrapper {
-  box-sizing: border-box;
   display: none;
   align-items: center;
   position: relative;
@@ -159,7 +149,6 @@
 }
 
 .cart-wrapper {
-  box-sizing: border-box;
   position: relative;
   width: 76px;
   padding: 0 9px;
@@ -195,7 +184,6 @@
 }
 
 .cart-logo {
-  box-sizing: border-box;
   position: relative;
   width: 18px;
   height: 18px;
@@ -219,7 +207,6 @@
   .menu-links,
   .sign-in-wrapper {
     display: flex;
-    box-sizing: border-box;
   }
   .hamburger-menu {
     display: none;
