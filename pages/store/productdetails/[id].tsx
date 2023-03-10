@@ -124,7 +124,7 @@ export default function ProductPage(data: any) {
                 ? ( stock > 10 ? <h2> In Stock </h2> : <h2> Only {stock} left in Stock!</h2>)
                 : <div className="flex flex-col justify-between items-center">
                     <h2 className="mb-4">Out of stock!</h2>
-                    <button className="bg-cyan-400 rounded-lg text-slate-600 py-2.5 px-6" onClick={handleRequestStock}>Request Stock</button>
+                    <button className="bg-cyan-400 rounded-lg text-slate-100 py-2.5 px-6" onClick={handleRequestStock}>Request Stock</button>
                   </div>
               }
             </div>
@@ -133,7 +133,7 @@ export default function ProductPage(data: any) {
                 <button className="bg-emerald-200 w-7 px-2 py-0 rounded-sm" disabled={count === 1} onMouseDown={handleDecrementClick} onTouchStart={handleDecrementClick} onMouseUp={() => clearInterval(intervalId)} onTouchEnd={() => clearInterval(intervalId)}>
                   -
                 </button>
-                <input value={count} min={1} onChange={e => setCount(parseInt(e.target.value) || 1)} type="number" className="w-8 mx-2 rounded-sm text-center bg-sky-200" />
+                <input aria-label="quantity" value={count} min={1} onChange={e => setCount(parseInt(e.target.value) || 1)} type="number" className="w-8 mx-2 rounded-sm text-center bg-sky-200" />
                 <button className="bg-orange-400 w-7 px-2 rounded-sm" onMouseDown={handleIncrementClick} onTouchStart={handleIncrementClick} onMouseUp={() => clearInterval(intervalId)} onTouchEnd={() => clearInterval(intervalId)}>
                   +
                 </button>
@@ -145,10 +145,10 @@ export default function ProductPage(data: any) {
                 <div>$ {parseInt(price) * count}</div>
               </div>
               <div className="mb-8 flex justify-center">
-                <button onClick={handleAddToCart} className="bg-amber-500 rounded-lg text-slate-600 py-2.5 px-6">Add To Cart</button>
+                <button onClick={handleAddToCart} className="bg-amber-500 rounded-lg text-slate-100 py-2.5 px-6">Add To Cart</button>
               </div>
               <div className="mb-8 flex justify-center">
-                <button onClick={handleBuyNow} className="bg-amber-400 rounded-lg text-slate-600 py-2.5 px-6">Buy Now</button>
+                <button onClick={handleBuyNow} className="bg-amber-400 rounded-lg text-slate-100 py-2.5 px-6">Buy Now</button>
               </div>
             </div>
           </div>
@@ -167,7 +167,7 @@ export default function ProductPage(data: any) {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </button>
-                <input value={count} min={1} onChange={e => setCount(parseInt(e.target.value) || 1)} type="number" className="w-8 mx-2 rounded-sm text-center bg-sky-200" />
+                <input value={count} aria-label="quantity" min={1} onChange={e => setCount(parseInt(e.target.value) || 1)} type="number" className="w-8 mx-2 rounded-sm text-center bg-sky-200" />
                 <button className="w-7 pb-0 px-0 rounded-sm" onMouseDown={handleIncrementClick} onTouchStart={handleIncrementClick} onMouseUp={() => clearInterval(intervalId)} onTouchEnd={() => clearInterval(intervalId)}>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="rgba(242,223,212)" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />

@@ -1,7 +1,10 @@
+'use client'
+
 import Logos from './Socials.js';
 import Link from 'next/link';
 import Image from 'next/image';
 import './Footer.css';
+import Menu from './HamMenu';
 
 
 const Footer = () => {
@@ -65,6 +68,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
+            <Menu />
             </footer>
     </>);
 }

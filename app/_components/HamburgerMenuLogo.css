@@ -1,12 +1,15 @@
 .menu-btn {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50px;
   height: 50px;
   flex-shrink: 0;
+  top: 20px;
+  right: 14px;
   cursor: pointer;
+  z-index: 133;
 }
 .menu-btn__burger,
 .menu-btn__burger::before,
@@ -35,4 +38,30 @@
 }
 .menu-btn.open .menu-btn__burger::after {
   transform: rotate(-45deg) translate(20px, 20px);
+}
+.ham-menu {
+  position: static;
+  visibility: hidden;
+}
+.ham-menu.open {
+  visibility: visible;
+}
+.ham-menu-blur {
+  transition: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+}
+.ham-menu-open {
+  transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(327px);
+}
+.ham-menu.open .ham-menu-open {
+  transform: translateX(0px);
+}
+.ham-menu.open .ham-menu-blur {
+  opacity: 100;
+}
+.close-button-blur {
+  content: '';
+  width: 100em;
+  height: 100em;
 }
