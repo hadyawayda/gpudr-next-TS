@@ -43,9 +43,9 @@ export default function ProductsPages({ products }: { products: Product[] }) {
   return (
     <>
       <Navbar />
-      <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto py-16 px-4 sm:py-24 sm:px-8 lg:px-12 max-w-xl sm:max-w-3xl md:max-w-4xl lg:max-w-7xl">
         <h1 className="mb-8">Products List:</h1>
-        <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+        <div className="grid gap-y-10 md:gap-y-14 gap-x-4 sm:gap-x-8 xl:gap-x-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
           {products?.map((product) => 
             <Productpage key={product.id} product={product} />
           )}
@@ -76,31 +76,14 @@ function Productpage({product}: {product: Product}) {
           onLoadingComplete={() => setLoading(false)}
         />
       </div>
-      <div className='mt-4 flex grow justify-between'>
-        <div className='flex flex-col'>
-          <h3 className="text-lg font-medium text-gray-700">{product.name}</h3>
-          <p id='description' className="mt-1 max-width leading-tight text-sm font-light text-gray-500">{product.description}</p>
+      <div className='mt-2 md:mt-4 flex flex-col gap-1 justify-between'>
+        <div className='flex justify-between items-start max-h-14 overflow-hidden'>
+          <h4 className="flex items-start max-h-12 break-all text-sm sm:text-base sm:leading-snug md:text-lg font-medium text-gray-700">{product.name}ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</h4>
+          <div className='pl-4 min-w-max pt-px flex items-center h-full text-gray-700
+          text-sm sm:text-base md:text-lg font-normal'>$ {product.price}.12</div>
         </div>
-        <p className='mt-1 pl-4 whitespace-nowrap text-gray-700 font-normal min-width'>${product.price}</p>
+        <p className="sm:mt-1 md:mt-1.5 max-h-12 md:max-h-14 break-words overflow-hidden leading-tight text-xs md:text-sm font-light text-gray-500">{product.description}ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</p>
       </div>
     </Link>
   )
 }
-
-// function Product ({product}:any) {
-//     const {id, title, description, part_number, stock_quantity, brand, image, type, category, condition, price} = product || {};
-
-//     return ( <>
-//         <Link href={`/products/${part_number}`}>
-//             <div className="outer-wrapper-products">
-//                 {/* <div className='image-wrapper'><Image src={`/${id}/${image}`} alt={description} width='300'/></div> */}
-//                 <div className="description-wrapper">
-//                     <h2>{title}</h2>
-//                     <div>{part_number}</div>
-//                     <div>`$ {price}`</div>
-//                     {/* <button type="button" onClick={handleCartSubmit}><div>Add To Cart</div></button> */}
-//                 </div>
-//             </div>
-//         </Link>
-//     </>)
-// }
