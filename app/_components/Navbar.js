@@ -3,6 +3,7 @@
 // import useState from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Dropdown from './DropdownMenu'
 import './Navbar.css';
 
 // Add Dark Mode Toggle Button
@@ -35,7 +36,7 @@ const Header = () => {
                 <div className="menu-links">
                     <Link href="/Services">Services</Link>
                     {/**add menu on hover*/}
-                    <Link href="/store">Store</Link>
+                    <Link href="/store" className='w-12 h-16'><Dropdown /></Link>
                     <div>New</div>
                     <Link className='whitespace-nowrap' href="/Mail-In">Mail In Form</Link>
                 </div>
