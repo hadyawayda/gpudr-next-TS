@@ -86,21 +86,3 @@ function Productpage({product}: {product: Product}) {
     </Link>
   )
 }
-
-// function Product ({product}:any) {
-//     const {id, title, description, part_number, stock_quantity, brand, image, type, category, condition, price} = product || {};
-
-//     return ( <>
-//         <Link href={`/products/${part_number}`}>
-//             <div className="outer-wrapper-products">
-//                 {/* <div className='image-wrapper'><Image src={`/${id}/${image}`} alt={description} width='300'/></div> */}
-//                 <div className="description-wrapper">
-//                     <h2>{title}</h2>
-//                     <div>{part_number}</div>
-//                     <div>`$ {price}`</div>
-//                     {/* <button type="button" onClick={handleCartSubmit}><div>Add To Cart</div></button> */}
-//                 </div>
-//             </div>
-//         </Link>
-//     </>)
-// }
