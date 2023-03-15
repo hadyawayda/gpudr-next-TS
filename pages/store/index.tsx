@@ -43,9 +43,9 @@ export default function ProductsPages({ products }: { products: Product[] }) {
   return (
     <>
       <Navbar />
-      <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 max-w-2xl overflow-hidden sm:max-w-2xl md:max-w-4xl lg:max-w-7xl">
         <h1 className="mb-8">Products List:</h1>
-        <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+        <div className="grid grid-cols-2 gap-y-24 sm:grid-cols-2 gap-x-6 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {products?.map((product) => 
             <Productpage key={product.id} product={product} />
           )}
@@ -76,12 +76,12 @@ function Productpage({product}: {product: Product}) {
           onLoadingComplete={() => setLoading(false)}
         />
       </div>
-      <div className='mt-4 flex grow justify-between'>
+      <div className='mt-4 flex justify-between'>
         <div className='flex flex-col'>
           <h3 className="text-lg font-medium text-gray-700">{product.name}</h3>
-          <p id='description' className="mt-1 max-width leading-tight text-sm font-light text-gray-500">{product.description}</p>
+          <p className="mt-1 break-all leading-tight text-sm font-light text-gray-500">{product.description}</p>
         </div>
-        <p className='mt-1 pl-4 whitespace-nowrap text-gray-700 font-normal min-width'>${product.price}</p>
+        <p className='mt-1 pl-4 text-gray-700 font-normal'>${product.price}</p>
       </div>
     </Link>
   )
