@@ -43,7 +43,7 @@ export default function ProductsPages({ products }: { products: Product[] }) {
   return (
     <>
       <Navbar />
-      <div className="mx-auto py-16 px-4 sm:py-24 sm:px-8 lg:px-12 max-w-xl sm:max-w-3xl md:max-w-4xl lg:max-w-7xl">
+      <div className="mx-auto py-16 px-4 sm:py-24 sm:px-12 md:px-14 lg:px-12 max-w-xl sm:max-w-3xl md:max-w-5xl lg:max-w-7xl">
         <h1 className="mb-8">Products List:</h1>
         <div className="grid gap-y-10 md:gap-y-14 gap-x-4 sm:gap-x-8 xl:gap-x-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
           {products?.map((product) => 
@@ -76,13 +76,14 @@ function Productpage({product}: {product: Product}) {
           onLoadingComplete={() => setLoading(false)}
         />
       </div>
-      <div className='mt-2 md:mt-4 flex flex-col gap-1 justify-between'>
+      <div className='mt-2 md:mt-3 flex flex-col gap-1 justify-between'>
         <div className='flex justify-between items-start max-h-14 overflow-hidden'>
-          <h4 className="flex items-start max-h-12 break-all text-sm sm:text-base sm:leading-snug md:text-lg font-medium text-gray-700">{product.name}ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</h4>
+          <h4 className="flex items-start max-h-12 text-sm sm:text-base md:text-lg 
+          sm:leading-snug md:leading-tight font-medium break-all text-gray-700">{product.name}ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</h4>
           <div className='pl-4 min-w-max pt-px flex items-center h-full text-gray-700
-          text-sm sm:text-base md:text-lg font-normal'>$ {product.price}.12</div>
+          text-sm sm:text-base lg:text-lg font-normal'>$ {product.price}.12</div>
         </div>
-        <p className="sm:mt-1 md:mt-1.5 max-h-12 md:max-h-14 break-words overflow-hidden leading-tight text-xs md:text-sm font-light text-gray-500">{product.description}ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</p>
+        <p className="sm:mt-1 md:mt-1.5 max-h-12 md:max-h-14 break-words overflow-hidden leading-none sm:leading-none text-xs md:text-sm font-light text-gray-500">{product.description}ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</p>
       </div>
     </Link>
   )
