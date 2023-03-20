@@ -65,7 +65,7 @@
   display: none;
   align-items: center;
   justify-content: flex-start;
-  padding-left: var(--padding2);
+  /* padding-left: var(--padding2); */
 }
 
 .search {

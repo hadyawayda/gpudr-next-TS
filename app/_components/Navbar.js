@@ -36,7 +36,7 @@ const Header = () => {
                 <div className="menu-links">
                     <Link href="/Services">Services</Link>
                     {/**add menu on hover*/}
-                    <Link href="/store" className='w-12 h-16'><Dropdown /></Link>
+                    <Link href="/store" className='menu-links'>Store</Link>
                     <div>New</div>
                     <Link className='whitespace-nowrap' href="/Mail-In">Mail In Form</Link>
                 </div>
