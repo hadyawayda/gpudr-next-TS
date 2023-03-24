@@ -1,0 +1,1 @@
+self.__FONT_LOADER_MANIFEST={pages:{"/":[],"/menu":[],"/store":[],"/store/productdetails/[id]":[]},app:{},appUsingSizeAdjust:!1,pagesUsingSizeAdjust:!1};

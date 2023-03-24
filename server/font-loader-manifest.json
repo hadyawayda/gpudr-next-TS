@@ -1,0 +1,11 @@
+{
+  "pages": {
+    "/": [],
+    "/menu": [],
+    "/store": [],
+    "/store/productdetails/[id]": []
+  },
+  "app": {},
+  "appUsingSizeAdjust": false,
+  "pagesUsingSizeAdjust": false
+}
