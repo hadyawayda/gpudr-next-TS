@@ -88,7 +88,7 @@ const Menu = () => {
                   <div className="-my-2 items-start space-y-2">
                     <a className="block w-full py-2 font-semibold" href="/services">Services</a>
                     <a className="flex w-full items-center py-2 font-semibold" href="/store">Store</a>
-                    <a className="block w-full py-2 font-semibold" href="/mail-in">Mail-In Form</a></div></div><div className="py-6 px-8"><div className="-my-2 space-y-4">
+                    <a className="block w-full py-2 font-semibold" href="/mail-in">Repair Mail-in Form</a></div></div><div className="py-6 px-8"><div className="-my-2 space-y-4">
                     <a className="block w-full py-2 font-semibold" href="/login">Sign in</a>
                   <a className="inline-flex justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-slate-900 text-white hover:bg-slate-700 w-full" href="/all-access"><span>Sell Your GPU <span aria-hidden="true">→</span></span></a>
                 </div>
