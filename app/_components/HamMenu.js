@@ -76,21 +76,21 @@ const Menu = () => {
         <div className="menu-btn__burger"></div>
       </div>
         <div className={'fixed inset-0 z-51 overflow-hidden lg:hidden ham-menu' + open} id="headlessui-dialog-10" role="dialog" aria-modal="true" data-headlessui-state="open" aria-labelledby="headlessui-dialog-title-12">
-          <div class="absolute inset-0 bg-slate-900/25 backdrop-blur-sm transition-opacity opacity-100 ham-menu-blur"></div>
-          <div class="fixed inset-0 flex items-start justify-end overflow-y-auto translate-x-0 ham-menu-open">
+          <div className="absolute inset-0 bg-slate-900/25 backdrop-blur-sm transition-opacity opacity-100 ham-menu-blur"></div>
+          <div className="fixed inset-0 flex items-start justify-end overflow-y-auto translate-x-0 ham-menu-open">
             <div className="grow h-full" onClick={handleMenuToggle}></div>
-            <div class="min-h-full w-[min(20rem,calc(100vw-theme(spacing.10)))] bg-white shadow-2xl ring-1 ring-black/10" id="headlessui-dialog-panel-11" data-headlessui-state="open">
-              <nav class="divide-y divide-slate-900/10 text-base leading-7 text-slate-900">
-                <div class="py-11 px-8">
-                  <a class="block w-9 overflow-hidden" href="/"></a>
+            <div className="min-h-full w-[min(20rem,calc(100vw-theme(spacing.10)))] bg-white shadow-2xl ring-1 ring-black/10" id="headlessui-dialog-panel-11" data-headlessui-state="open">
+              <nav className="divide-y divide-slate-900/10 text-base leading-7 text-slate-900">
+                <div className="py-11 px-8">
+                  <a className="block w-9 overflow-hidden" href="/"></a>
                 </div>
-                <div class="py-6 px-8">
-                  <div class="-my-2 items-start space-y-2">
-                    <a class="block w-full py-2 font-semibold" href="/services">Services</a>
-                    <a class="flex w-full items-center py-2 font-semibold" href="/store">Store</a>
-                    <a class="block w-full py-2 font-semibold" href="/mail-in">Mail-In Form</a></div></div><div class="py-6 px-8"><div class="-my-2 space-y-4">
-                    <a class="block w-full py-2 font-semibold" href="/login">Sign in</a>
-                  <a class="inline-flex justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-slate-900 text-white hover:bg-slate-700 w-full" href="/all-access"><span>Sell Your GPU <span aria-hidden="true">→</span></span></a>
+                <div className="py-6 px-8">
+                  <div className="-my-2 items-start space-y-2">
+                    <a className="block w-full py-2 font-semibold" href="/services">Services</a>
+                    <a className="flex w-full items-center py-2 font-semibold" href="/store">Store</a>
+                    <a className="block w-full py-2 font-semibold" href="/mail-in">Mail-In Form</a></div></div><div className="py-6 px-8"><div className="-my-2 space-y-4">
+                    <a className="block w-full py-2 font-semibold" href="/login">Sign in</a>
+                  <a className="inline-flex justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-slate-900 text-white hover:bg-slate-700 w-full" href="/all-access"><span>Sell Your GPU <span aria-hidden="true">→</span></span></a>
                 </div>
                 </div>
               </nav>

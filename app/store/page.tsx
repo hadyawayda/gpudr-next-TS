@@ -7,22 +7,26 @@ import { useState } from 'react'
 import { createClient } from '@supabase/supabase-js'
 
 async function getData() {
-    const supabaseAdmin = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL || '',
-      process.env.SUPABASE_SERVICE_ROLE_KEY || ''
-    )
-    const { data } = await supabaseAdmin
-      .from('Products')
-      .select('*')
-      .order('id')
-    console.log(data)
-    return data
+  const supabaseAdmin = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL || '',
+    process.env.SUPABASE_SERVICE_ROLE_KEY || ''
+  )
+  const { data } = await supabaseAdmin
+    .from('Products')
+    .select('*')
+    .order('id')
+  console.log(data)
+  return {
+    props: {
+      products: data,
+    },
   }
+}
   
-const products = getData().then((prd) => {
-  console.log(prd)
-  return prd.items
-})
+// const products = getData().then((prd) => {
+//   console.log(prd)
+//   return prd.items
+// })
 
 function cn(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
@@ -36,8 +40,8 @@ type Product = {
   description: string
 }
 
-export default function Products() {
-
+export default async function Products(products:Product[]) {
+  const output = await getData();
   return (
     <>
       <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">

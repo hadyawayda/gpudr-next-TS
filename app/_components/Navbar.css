@@ -3,7 +3,12 @@
   src: url('../../public/Fonts/Inter/Inter-var.ttf'), format('trueType');
   font-weight: 600;
 }
-
+@font-face {
+  font-family: 'Overpass';
+  src: url('../../public/Fonts/Inter/Overpass-VariableFont_wght.ttf'),
+    format('trueType');
+  font-weight: 600;
+}
 :root {
   --padding1: 0px;
   --padding2: 50px;

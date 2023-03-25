@@ -1,10 +1,13 @@
 {
   "name": "gpudoctor",
+  "homepage": "https://hady994.github.io/gpudr-next-TS/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d .next",
     "start": "next start",
     "lint": "next lint"
   },
@@ -29,6 +32,7 @@
     "autoprefixer": "^10.4.13",
     "eslint-config-prettier": "^8.6.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^5.0.0",
     "postcss": "^8.4.21",
     "prettier": "2.8.4",
     "tailwindcss": "^3.2.7"
