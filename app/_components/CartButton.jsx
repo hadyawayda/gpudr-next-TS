@@ -5,7 +5,7 @@ import { Popover , Transition} from '@headlessui/react'
 import { Fragment, useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Trash from '../../public/images/trash2'
+import Trash from './trash2'
 
 export default function CartButton() {
   const [subtotal, setSubtotal] = useState(0)
