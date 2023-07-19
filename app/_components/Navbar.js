@@ -48,16 +48,9 @@ const Navbar = () => {
                         {/**make sign in wrapper scalable for longer usernames, add welcome username, and also make sign functionality (popup?)*/}
                     </div>
                     {/**Add Cart sub-menu with items count, total price, background blur, scrolling, deleting and increasing quantity functionality also with empty cart button and checkout button, also add total price, and stock count notification in case stock is low */}
-                    <div className='hidden md:flex'>
+                    <div className='hidden lg:flex'>
                         <CartButton/>
                     </div>
-                    {/* <button className="cart-wrapper-outer" onClick={() => handleOpenCart()}>
-                        <div className="cart-wrapper"> */}
-                            {/* <Image className='cart-logo' alt="cart logo" src={require("../../public/Images/Cart.svg").default}/>
-                            <p className='cart'>Cart</p>
-                        </div>
-                        <div className="cart-items-counter">99</div>
-                    </button> */}
                 </div>
             </nav>
         </header>
