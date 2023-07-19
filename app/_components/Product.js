@@ -11,28 +11,25 @@ async function getProducts () {
     return data?.items;
 }
 
+export default async function Product () {
+    const products = await getProducts();
+
+    return (
+        <div>
+            <h1>Products List:</h1>
+            <div className="product-page-wrapper">
+                {products?.map((product) => {
+                    return <Products key={product.id} product={product} />
+                })}
+            </div>
+        </div>
+    )
+}
+
 function Products ({product}) {
     const {id, title, description, part_number, stock_quantity, brand, image, type, category, condition, price} = product || {};
-    
-    // console.log(`${id}/${image}`);
 
-    // const [cartItems, setCartItems] = useState([]);
-
-    // function handleCartSubmit (addedItem) {
-    //     if (cartItems.id === addedItem.id) {
-    //         setCartItems([...cartItems, {
-    //             id: addedItem,
-    //             quantity: quantity++
-    //             }])
-    //     } else {
-    //         setCartItems([...cartItems, {
-    //         id: {id},
-    //         quantity: 1
-    //         }])
-    //     }
-    // }
-
-    return ( <>
+    return (
         <Link href={`/products/${part_number}`}>
             <div className="outer-wrapper-products">
                 <div className='image-wrapper'><Image src={`/${id}/${image}`} alt={description} width={300}/></div>
@@ -44,20 +41,5 @@ function Products ({product}) {
                 </div>
             </div>
         </Link>
-    </>)
-}
-
-export default async function Product () {
-    const products = await getProducts();
-
-    return ( <>
-        <div>
-            <h1>Products List:</h1>
-            <div className="product-page-wrapper">
-                {products?.map((product) => {
-                    return <Products key={product.id} product={product} />
-                })}
-            </div>
-        </div>
-    </>)
+    )
 }

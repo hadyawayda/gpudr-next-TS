@@ -8,7 +8,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   experimental: {
-    appDir: false,
+    appDir: true,
   },
   
   // disable css-modules component styling

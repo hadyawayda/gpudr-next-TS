@@ -1,9 +1,10 @@
 'use client'
 
-// import useState from 'react';
+import CartButton from '../_components/CartButton'
 import Link from 'next/link';
 import Image from 'next/image';
 import './Navbar.css';
+import { useState } from 'react';
 
 // Add Dark Mode Toggle Button
 // Add Sell Your GPU section
@@ -12,19 +13,11 @@ import './Navbar.css';
 // Add User Panel with List of Devices for repair, and ability to track status of each one seperately, 
 // with information about the repair upon user request, and notifications when status updates happen.
 
-const Header = () => {
-    // const [cartItems, setCartItems] = useState([]);
+const Navbar = () => {
+    const [cartItems, setCartItems] = useState([]);
     // const [isClosed, setIsClosed] = useState(true);
 
-    // function handleHamburgerMenuToggle () {
-    //     if (isClosed === false) {
-    //         setIsClosed(true);
-    //     }
-    //     if (isClosed === true) {
-    //         setIsClosed(false);
-    //     }
-    // };
-
+    
     return ( <>
         <header className='header'>
             <nav className="navbar">
@@ -39,7 +32,7 @@ const Header = () => {
                     <div>New</div>
                     <Link className='whitespace-nowrap' href="/Mail-In">Mail In Form</Link>
                 </div>
-                <div className="flex-container">
+                <div className="relative h-24 flex items-center justify-end">
                     <button aria-label="search" className="search" type='button'>
                         {/**add search pop-up with blurred background and full functionality*/}
                         <svg className='search-logo'>
@@ -53,18 +46,21 @@ const Header = () => {
                         <Link className='sign-in-link' href="/login">Sign in</Link>
                         {/**make sign in wrapper scalable for longer usernames, add welcome username, and also make sign functionality (popup?)*/}
                     </div>
-                    <button className="cart-wrapper-outer">
-                        <div className="cart-wrapper">
-                            {/**Add Cart sub-menu with items count, total price, background blur, scrolling, deleting and increasing quantity functionality also with empty cart button and checkout button, also add total price, and stock count notification in case stock is low */}
-                            <Image className='cart-logo' alt="cart logo" src={require("../../public/Images/Cart.svg").default}/>
+                    {/**Add Cart sub-menu with items count, total price, background blur, scrolling, deleting and increasing quantity functionality also with empty cart button and checkout button, also add total price, and stock count notification in case stock is low */}
+                    <div className='hidden md:flex'>
+                        <CartButton/>
+                    </div>
+                    {/* <button className="cart-wrapper-outer" onClick={() => handleOpenCart()}>
+                        <div className="cart-wrapper"> */}
+                            {/* <Image className='cart-logo' alt="cart logo" src={require("../../public/Images/Cart.svg").default}/>
                             <p className='cart'>Cart</p>
                         </div>
                         <div className="cart-items-counter">99</div>
-                    </button>
+                    </button> */}
                 </div>
             </nav>
         </header>
     </> );
 }
  
-export default Header;
+export default Navbar;

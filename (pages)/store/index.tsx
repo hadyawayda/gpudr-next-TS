@@ -8,6 +8,14 @@ import './Product.css'
 import { useState } from 'react'
 import { createClient } from '@supabase/supabase-js'
 
+type Product = {
+  id: number
+  name: string
+  price: number
+  imageUrl: string
+  description: string
+}
+
 export async function getStaticProps() {
   const supabaseAdmin = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL || '',
@@ -27,14 +35,6 @@ export async function getStaticProps() {
 
 function cn(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
-}
-
-type Product = {
-  id: number
-  name: string
-  price: number
-  imageUrl: string
-  description: string
 }
 
 export default function ProductsPages({ products }: { products: Product[] }) {

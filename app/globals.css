@@ -1,6 +1,19 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../public/Fonts/Inter/Inter-var.ttf'), format('trueType');
+  font-weight: 600;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#root {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  overflow: hidden;
+}
 
 html,
 body {
@@ -21,6 +34,7 @@ a {
 ::before {
   border: 0 solid #e5e7eb;
   box-sizing: border-box;
+  font-family: Inter, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
