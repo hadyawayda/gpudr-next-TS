@@ -101,15 +101,15 @@ export default function ProductPage(data: any) {
             <Image className="mb-20 max-w-2xl rounded-lg" src={imageUrl} alt={description} width={320} height={320} />
           </div>
           <div className="hidden w-80 lg:ml-4 lg:flex justify-start flex-col">
-            <div>
-              <h1>{name}</h1>
+            <div className="mt-20 text-2xl flex">
+              <h1 className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-violet-500">{name}</h1>
               <h1>{longName}</h1>
             </div>
-            <div>
-              $ {price}
+            <div className="flex mt-4">
+              <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r to-sky-500 from-violet-500">$ {price}</h1>
             </div>
-            <div>
-              {longDescription}
+            <div className="mt-20 flex">
+              <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-rose-500">{description}</h1>
             </div>
           </div>
           <div className="hidden max-w-sm px-4 py-2 rounded-lg bg-slate-200 lg:ml-4 lg:flex justify-between items-center flex-col">

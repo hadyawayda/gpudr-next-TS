@@ -71,7 +71,7 @@ const Menu = () => {
   }, []);
 
   return (
-    <div className=" md:hidden">
+    <div className="lg:hidden">
       <div className={'menu-btn' + open} onClick={handleMenuToggle}>
         <div className="menu-btn__burger"></div>
       </div>

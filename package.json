@@ -1,10 +1,13 @@
 {
   "name": "gpudoctor",
+  "homepage": "https://hady994.github.io/gpudr-next-TS/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d .next",
     "start": "next start",
     "lint": "next lint"
   },

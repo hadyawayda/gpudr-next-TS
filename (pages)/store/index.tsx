@@ -25,7 +25,6 @@ export async function getStaticProps() {
     .from('Products')
     .select('*')
     .order('id')
-  console.log(data)
   return {
     props: {
       products: data,

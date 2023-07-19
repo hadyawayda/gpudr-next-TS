@@ -3,6 +3,7 @@
 import CartButton from '../_components/CartButton'
 import Link from 'next/link';
 import Image from 'next/image';
+import Dropdown from './DropdownMenu'
 import './Navbar.css';
 import { useState } from 'react';
 
@@ -28,7 +29,7 @@ const Navbar = () => {
                 <div className="menu-links">
                     <Link href="/Services">Services</Link>
                     {/**add menu on hover*/}
-                    <Link href="/store">Store</Link>
+                    <Link href="/store" className='menu-links'>Store</Link>
                     <div>New</div>
                     <Link className='whitespace-nowrap' href="/Mail-In">Mail In Form</Link>
                 </div>
