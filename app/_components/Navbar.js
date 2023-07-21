@@ -3,9 +3,9 @@
 import CartButton from '../_components/CartButton'
 import Link from 'next/link';
 import Image from 'next/image';
-import Dropdown from './DropdownMenu'
+// import Dropdown from './DropdownMenu'
 import './Navbar.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // Add Dark Mode Toggle Button
 // Add Sell Your GPU section
@@ -15,22 +15,36 @@ import { useState } from 'react';
 // with information about the repair upon user request, and notifications when status updates happen.
 
 const Navbar = () => {
-    const [cartItems, setCartItems] = useState([]);
-    // const [isClosed, setIsClosed] = useState(true);
 
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry)
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show')
+                } else {
+                    entry.target.classList.remove('show')
+                }
+            })
+        })
+        document.querySelectorAll('.animate').forEach((el) => observer.observe(el));
+    }, [])
+
+    const [cartItems, setCartItems] = useState([]);
     
     return ( <>
-        <header className='header'>
+        <header className='header animate'>
             <nav className="navbar">
                 <Link className='image-wrapper' href="/" alt='main'>
                     <Image className='image-container' alt="gpu logo" src={require("../../public/Images/gpu.jpg")}/>
                 </Link>
                 <div className='wrap-1'></div>
                 <div className="menu-links">
+                    <Link href='/pricing'>Pricing</Link>
                     <Link href="/Services">Services</Link>
                     {/**add menu on hover*/}
                     <Link href="/store" className='menu-links'>Store</Link>
-                    <div>New</div>
+                    <div className='ml-2 mr-8 rounded-full py-0.5 px-1.5 text-white text-xs leading-4'>New</div>
                     <Link className='whitespace-nowrap' href="/Mail-In">Mail In Form</Link>
                 </div>
                 <div className="relative h-24 flex items-center justify-end">

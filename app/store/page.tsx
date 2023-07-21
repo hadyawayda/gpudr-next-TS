@@ -55,9 +55,8 @@ export default function Products() {
 
   return (
     <div>
-      <Navbar />
       { loading 
-      ? <div className='justify-center items-center flex mt-40'>Loading...</div>
+      ? <div className='justify-center items-center flex my-40'>Loading...</div>
       : <main>
           <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
             <h1 className="mb-8">Products List:</h1>
@@ -72,7 +71,6 @@ export default function Products() {
           </div>
         </main>
       }
-      <Footer />
     </div>
   )
 }

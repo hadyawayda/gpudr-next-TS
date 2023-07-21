@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d .next",
@@ -25,6 +25,7 @@
     "pocketbase": "^0.15.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-intersection-observer": "^9.5.2",
     "sharp": "^0.32.1",
     "typescript": "4.9.5"
   },
