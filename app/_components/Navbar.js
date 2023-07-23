@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <header className="header animate">
-      <nav className="navbar">
+      <nav className="navbar px-2 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
         <Link className="ml-4" href="/" alt="main">
           <Image
             className="image-container"
@@ -59,13 +59,16 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="relative h-24 flex items-center justify-end">
-          <button aria-label="search" className="search" type="button">
+          <button
+            aria-label="search"
+            className="search mr-6 md:mr-8 lg:mr-0"
+            type="button">
             {/**add search pop-up with blurred background and full functionality*/}
             <svg className="search-logo">
               <path d="M20.47 21.53a.75.75 0 1 0 1.06-1.06l-1.06 1.06Zm-9.97-4.28a6.75 6.75 0 0 1-6.75-6.75h-1.5a8.25 8.25 0 0 0 8.25 8.25v-1.5ZM3.75 10.5a6.75 6.75 0 0 1 6.75-6.75v-1.5a8.25 8.25 0 0 0-8.25 8.25h1.5Zm6.75-6.75a6.75 6.75 0 0 1 6.75 6.75h1.5a8.25 8.25 0 0 0-8.25-8.25v1.5Zm11.03 16.72-5.196-5.197-1.061 1.06 5.197 5.197 1.06-1.06Zm-4.28-9.97c0 1.864-.755 3.55-1.977 4.773l1.06 1.06A8.226 8.226 0 0 0 18.75 10.5h-1.5Zm-1.977 4.773A6.727 6.727 0 0 1 10.5 17.25v1.5a8.226 8.226 0 0 0 5.834-2.416l-1.061-1.061Z"></path>
             </svg>
           </button>
-          <div className="mr-9 lg:hidden flex justify-center items-center">
+          <div className="mr-6 md:mr-10 lg:hidden flex justify-center items-center">
             <Image
               className="w-5 h-5 top-4"
               alt="cart logo"
@@ -77,8 +80,8 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className="sign-in-wrapper ml-8">
-            <Link className="sign-in-link pl-10" href="/login">
+          <div className="sign-in-wrapper lg:ml-4 xl:ml-8">
+            <Link className="sign-in-link lg:pl-6 xl:pl-10" href="/login">
               Sign in
             </Link>
             {/**make sign in wrapper scalable for longer usernames, add welcome username, and also make sign functionality (popup?)*/}

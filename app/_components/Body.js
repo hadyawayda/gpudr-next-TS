@@ -14,7 +14,7 @@ const Body = () => {
       />
       <div className="body-wrapper">
         <section className="pt-36">
-          <h1 className="animate mid col-start-1 row-start-2 max-w-[36rem] text-4xl font-extrabold tracking text-slate-900 sm:text-5xl md:text-7xl xl:max-w-[43.5rem]">
+          <h1 className="animate mid col-start-1 w-1/2 row-start-2 max-w-[36rem] text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl md:text-7xl xl:max-w-[43.5rem]">
             Professional Graphics Cards Repair Service.
           </h1>
           <div className="animate late mover col-start-1 row-start-1 h-7 text-xl font-semibold mt-8 leading-7 text-sky-500">
