@@ -43,10 +43,6 @@
   width: 50%;
 }
 
-.socials-1 {
-  border-bottom: 1px solid rgb(224, 228, 232);
-}
-
 .copyright-wrapper,
 .terms-of-use-wrapper {
   font-size: 12px;
@@ -133,5 +129,11 @@
   .support-wrapper,
   .help-wrapper {
     margin-bottom: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  #top {
+    border-bottom: 1px solid rgb(224, 228, 232);
   }
 }
