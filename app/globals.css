@@ -41,12 +41,32 @@ a {
   transition: all 1s;
   transform: translateY(5%);
 }
+.animate.mover {
+  transform: translateY(50%);
+}
 .show {
   opacity: 1;
-  filter: blur(20);
-  transition-delay: 200ms;
+  filter: blur(0);
+  transition-delay: 250ms;
   transform: translateY(0);
 }
+.show.mid {
+  transition-delay: 500ms;
+  transform: translateY(0);
+}
+.show.late {
+  transition-delay: 750ms;
+  transform: translateY(0);
+}
+.show.vlate {
+  transition-delay: 1000ms;
+  transform: translateY(0);
+}
+.show.vvlate {
+  transition-delay: 1250ms;
+  transform: translateY(0);
+}
+
 @media (prefers-reduced-motion) {
   .hidden {
     transition: none;

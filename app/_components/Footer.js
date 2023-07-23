@@ -19,38 +19,38 @@ const Footer = () => {
         <div id="top" className="socials-1 flex justify-center p-20 animate md:hidden mb-20">
           <Logos/>
         </div>
-        <div className="lg:pt-10 lg:pb-20 flex justify-center py-10 md:py-20 animate w-full items-start grow flex-wrap flex-row md:flex-nowrap">
-          <div className="flex items-center h-24 w-1/2 pl-10 lg:w-4/12">
+        <div className="lg:pt-10 lg:pb-20 flex justify-center py-10 md:py-20 w-full items-start grow flex-wrap flex-row md:flex-nowrap">
+          <div className="flex items-center h-24 w-1/2 pl-10 lg:w-4/12 animate">
             <Image className='h-12 w-12' alt="gpu logo" src={require("../../public/Images/gpucore.jpg")}/>
           </div>
           <div className='index-wrapper pl-12'>
-            <h4 className='headings'>Index</h4>
-            <p>Home</p>
-            <p>Services</p>
-            <p id='mail-in'>Mail In</p>
+            <h4 className='headings animate'>Index</h4>
+            <p className='animate mid'>Home</p>
+            <p className='animate late'>Services</p>
+            <p className='animate vlate' id='mail-in'>Mail In</p>
           </div>
           <div className="support-wrapper pl-12">
-            <h4 className='headings'>Support</h4>
-            <p>Shipping Policy</p>
-            <p>Return Policy</p>
-            <p>Privacy Policy</p>
+            <h4 className='headings animate'>Support</h4>
+            <p className='animate mid'>Shipping Policy</p>
+            <p className='animate late'>Return Policy</p>
+            <p className='animate vlate'>Privacy Policy</p>
           </div>
           <div className="help-wrapper pl-12">
-            <h4 className='headings' id="need-help">Need Help?</h4>
-            <div className='contact-us-wrapper'>
-            <p className='contact-us' id='contact-us'>Contact Us </p>
-              <Link rel="noreferrer" className=' ml-2' target="_blank" href="https://wa.me/96176941100">
+            <h4 className='headings animate' id="need-help">Need Help?</h4>
+            <div className='contact-us-wrapper animate mid'>
+            <p className='contact-us animate late' id='contact-us'>Contact Us </p>
+              <Link rel="noreferrer" className='ml-2' target="_blank" href="https://wa.me/96176941100">
                 <Image className="contact-links-1" alt="WhatsApp" src={require("../../public/Images/WhatsApp.svg").default}/>
               </Link>
               <Link rel="noreferrer" className='' target="_blank" href="mailto:hady_awayda@hotmail.com" >
                 <Image id='email-logo' alt="Email" src={require("../../public/Images/Email.svg").default}/>
               </Link>
             </div>
-            <p>About Us</p>
-            <p>FAQ</p>
+            <p className='animate late'>About Us</p>
+            <p className='animate vlate'>FAQ</p>
           </div>    
         </div>
-        <div className="flex justify-center w-full px-12 h-96 items-center">
+        <div className="flex justify-center w-full px-12 h-96 items-center animate vvlate">
           <div className="footer-lower-section-wrapper animate py-20 flex items-center lg:h-60 w-full justify-between grow">
             <div className='flex justify-between flex-col-reverse lg:ml-6'>
               <p className='copyright-wrapper'>2023 © GPU Doctor</p>
