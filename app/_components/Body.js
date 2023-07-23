@@ -7,11 +7,11 @@ import './Body.css'
 const Body = () => {
   return (
     <div className="body-outer-wrapper">
-      {/* <Image
+      <Image
         src={require('../../public/Images/background.jpg')}
         alt="background"
         className="background-image"
-      /> */}
+      />
       <div className="body-wrapper">
         <section className="pt-36">
           <h1 className="animate mid col-start-1 row-start-2 max-w-[36rem] text-4xl font-extrabold tracking text-slate-900 sm:text-5xl md:text-7xl xl:max-w-[43.5rem]">
