@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 // import Dropdown from './DropdownMenu'
 import './Navbar.css';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 // Add Dark Mode Toggle Button
 // Add Sell Your GPU section
@@ -19,7 +19,6 @@ const Navbar = () => {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                console.log(entry)
                 if (entry.isIntersecting) {
                     entry.target.classList.add('show')
                 } else {
@@ -30,8 +29,6 @@ const Navbar = () => {
         document.querySelectorAll('.animate').forEach((el) => observer.observe(el));
     }, [])
 
-    const [cartItems, setCartItems] = useState([]);
-    
     return ( <>
         <header className='header animate'>
             <nav className="navbar">
@@ -46,7 +43,7 @@ const Navbar = () => {
                     <Link href="/store" className='menu-links'>Store</Link>
                     <div className='ml-2 mr-8 rounded-full py-0.5 px-1.5 text-white text-xs leading-4'>New</div>
                     <Link className='whitespace-nowrap' href="/mail-in">Mail Your GPU</Link>
-                    <Link className='whitespace-nowrap' href="/sell ml-4 pl-4">Sell Your GPU</Link>
+                    <Link className='whitespace-nowrap ml-8' href="/sell">Sell Your GPU</Link>
                 </div>
                 <div className="relative h-24 flex items-center justify-end">
                     <button aria-label="search" className="search" type='button'>
