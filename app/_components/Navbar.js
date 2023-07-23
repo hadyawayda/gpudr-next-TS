@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <header className="header animate">
       <nav className="navbar">
-        <Link className="image-wrapper" href="/" alt="main">
+        <Link className="ml-4" href="/" alt="main">
           <Image
             className="image-container"
             alt="gpu logo"
