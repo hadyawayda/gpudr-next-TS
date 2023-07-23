@@ -21,9 +21,6 @@
 }
 
 .body-wrapper {
-  padding-left: 2rem;
-  padding-right: 2rem;
-  max-width: 90rem;
   width: 100%;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   display: grid;

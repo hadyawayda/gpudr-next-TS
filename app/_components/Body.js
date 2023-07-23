@@ -6,7 +6,7 @@ import './Body.css'
 
 const Body = () => {
   return (
-    <div className="body-outer-wrapper">
+    <div className="body-outer-wrapper px-8 sm:px-10 md:px-12 lg:px-14 xl:px-16 2xl:px-24">
       <Image
         src={require('../../public/Images/background.jpg')}
         alt="background"
@@ -17,7 +17,7 @@ const Body = () => {
           <h1 className="animate mid col-start-1 w-1/2 row-start-2 max-w-[36rem] text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl md:text-7xl xl:max-w-[43.5rem]">
             Professional Graphics Cards Repair Service.
           </h1>
-          <div className="animate late mover col-start-1 row-start-1 h-7 text-xl font-semibold mt-8 leading-7 text-sky-500">
+          <div className="animate late mover w-1/2 col-start-1 row-start-1 h-7 text-xl font-semibold mt-8 leading-7 text-sky-500">
             We fix GPUs only. It&apos;s our specialty.
           </div>
         </section>

@@ -14,7 +14,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className="footer-wrapper md:mt-20 lg:px-20 w-full flex flex-col justify-start items-center font-medium text-lg">
+    <footer className="footer-wrapper mt-20 lg:px-20 w-full flex flex-col justify-start items-center font-medium text-lg">
       <div
         id="top"
         className="flex justify-center md:hidden w-3/4 md:w-full animate m-20">
