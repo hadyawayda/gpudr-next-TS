@@ -45,7 +45,8 @@ const Navbar = () => {
                     {/**add menu on hover*/}
                     <Link href="/store" className='menu-links'>Store</Link>
                     <div className='ml-2 mr-8 rounded-full py-0.5 px-1.5 text-white text-xs leading-4'>New</div>
-                    <Link className='whitespace-nowrap' href="/Mail-In">Mail In Form</Link>
+                    <Link className='whitespace-nowrap' href="/mail-in">Mail Your GPU</Link>
+                    <Link className='whitespace-nowrap' href="/sell ml-4 pl-4">Sell Your GPU</Link>
                 </div>
                 <div className="relative h-24 flex items-center justify-end">
                     <button aria-label="search" className="search" type='button'>
