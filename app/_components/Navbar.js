@@ -70,7 +70,7 @@ const Navbar = () => {
           </button>
           <div className="w-10 h-10 mr-6 md:mr-8 lg:hidden flex justify-center items-center">
             <Image
-              className="w-5 h-5 top-4"
+              className="w-5 h-5"
               alt="cart logo"
               src={require('../../public/Images/Cart-black.svg').default}
             />
