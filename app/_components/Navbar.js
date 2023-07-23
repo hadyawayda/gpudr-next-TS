@@ -3,9 +3,9 @@
 import CartButton from '../_components/CartButton'
 import Link from 'next/link';
 import Image from 'next/image';
-// import Dropdown from './DropdownMenu'
 import './Navbar.css';
 import { useEffect } from 'react';
+import Menu from './HamMenu';
 
 // Add Dark Mode Toggle Button
 // Add Sell Your GPU section
@@ -29,7 +29,7 @@ const Navbar = () => {
         document.querySelectorAll('.animate').forEach((el) => observer.observe(el));
     }, [])
 
-    return ( <>
+    return (
         <header className='header animate'>
             <nav className="navbar">
                 <Link className='image-wrapper' href="/" alt='main'>
@@ -37,8 +37,8 @@ const Navbar = () => {
                 </Link>
                 <div className='wrap-1'></div>
                 <div className="menu-links">
-                    <Link href='/pricing'>Pricing</Link>
-                    <Link href="/Services">Services</Link>
+                    <Link className='mr-8' href='/pricing'>Pricing</Link>
+                    <Link className='mr-8' href="/Services">Services</Link>
                     {/**add menu on hover*/}
                     <Link href="/store" className='menu-links'>Store</Link>
                     <div className='ml-2 mr-8 rounded-full py-0.5 px-1.5 text-white text-xs leading-4'>New</div>
@@ -55,18 +55,21 @@ const Navbar = () => {
                     <div className="hamburger-menu">
                         {/* <Menu /> */}
                     </div>
-                    <div className='sign-in-wrapper'>
-                        <Link className='sign-in-link' href="/login">Sign in</Link>
+                    <div className='sign-in-wrapper ml-8'>
+                        <Link className='sign-in-link pl-10' href="/login">Sign in</Link>
                         {/**make sign in wrapper scalable for longer usernames, add welcome username, and also make sign functionality (popup?)*/}
                     </div>
+                    <div className='flex lg:hidden'>
+                        <Menu />
+                    </div>
                     {/**Add Cart sub-menu with items count, total price, background blur, scrolling, deleting and increasing quantity functionality also with empty cart button and checkout button, also add total price, and stock count notification in case stock is low */}
-                    <div className='hidden lg:flex'>
+                    <div className='hidden lg:flex justify-start ml-10'>
                         <CartButton/>
                     </div>
                 </div>
             </nav>
         </header>
-    </> );
+    );
 }
  
 export default Navbar;

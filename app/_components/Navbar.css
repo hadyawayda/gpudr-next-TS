@@ -94,7 +94,6 @@
   align-items: center;
   position: relative;
   height: 32px;
-  padding-left: 32px;
   border-left: 1px solid rgba(15, 23, 42, 0.15);
   height: 24px;
 }
@@ -108,14 +107,6 @@
   font-size: 15px;
   line-height: 24px;
   color: #111827;
-}
-
-.menu-links > a:nth-of-type(2),
-.menu-links > a:nth-of-type(3),
-.search,
-.sign-in-wrapper,
-.cart-wrapper {
-  margin-left: 32px;
 }
 
 .menu-links > div {
@@ -175,8 +166,5 @@
   }
   .navbar {
     padding: 0 2rem;
-  }
-  .cart-wrapper-outer {
-    display: block;
   }
 }

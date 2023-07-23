@@ -4,8 +4,6 @@ import Logos from './Socials.js';
 import Link from 'next/link';
 import Image from 'next/image';
 import './Footer.css';
-import Menu from './HamMenu';
-
 
 const Footer = () => {
 
@@ -53,7 +51,7 @@ const Footer = () => {
           </div>    
         </div>
         <div className="flex justify-center w-full px-12 h-96 items-center">
-          <div className="footer-lower-section-wrapper animate py-20 flex items-center h-60 w-full justify-between grow">
+          <div className="footer-lower-section-wrapper animate py-20 flex items-center lg:h-60 w-full justify-between grow">
             <div className='flex justify-between flex-col-reverse lg:ml-6'>
               <p className='copyright-wrapper'>2023 © GPU Doctor</p>
               <p className='terms-of-use-wrapper'><Link href="https://www.gpudoctor.com/terms" >Terms of use</Link></p>
@@ -66,7 +64,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <Menu />
       </footer>
     );
 }

@@ -82,7 +82,7 @@ export default function CartButton() {
   },[])
   
   return (
-      <Popover className="relative flex popover">
+      <Popover className="relative flex justify-end">
         {({ open }) => (
           <>
             <Popover.Button
@@ -95,7 +95,9 @@ export default function CartButton() {
                 <Image className='cart-logo top-4' alt="cart logo" src={require("../../public/Images/Cart.svg").default}/>
               </div>
             </Popover.Button>
-            <div className="cart-items-counter relative flex justify-center items-center text-black z-0 bg-gray-300 w-6 h-6 text-xs rounded-full -left-3.5 cart-counter">{solutions.length >= 99 ? 99 : solutions.length}</div>
+            <div className='w-0'>
+              <div className="relative flex justify-center items-center text-black z-0 bg-gray-300 w-6 h-6 text-xs rounded-full -left-3.5 cart-counter">{solutions.length >= 99 ? 99 : solutions.length}</div>
+            </div>
             <Transition
               as={Fragment}
               enter="transition ease-out duration-200"
@@ -105,7 +107,7 @@ export default function CartButton() {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="fixed top-20 right-14 font-semibold overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+              <Popover.Panel className="fixed top-24 right-14 font-semibold overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                   { solutions.length === 0 
                     ? <div className='flex justify-center items-center cart-upper bg-gray-50'>
                         <div className='italic '>
