@@ -10,7 +10,7 @@ const Body = () => {
       <Image
         src={require('../../public/Images/background.jpg')}
         alt="background"
-        className="background-image dark:hidden"
+        className="background-image"
       />
       <div className="body-wrapper">
         <section className="pt-36">

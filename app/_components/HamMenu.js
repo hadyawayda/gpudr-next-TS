@@ -1,13 +1,13 @@
 'use client'
 
-import { Popover } from "@headlessui/react";
+import { Popover } from '@headlessui/react'
 // learn react lazy loading
 // learn react suspensimport { useState } from 'react'
 
 // make it disappear after swipe
 // also make the hamburger menu button stay on top even if we put the menu as the last item
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 import './HamburgerMenuLogo.css'
 
 const Menu = () => {
@@ -17,63 +17,63 @@ const Menu = () => {
     open === ' open' ? setOpen('') : setOpen(' open')
   }
   useEffect(() => {
-    const body = document.querySelector('body');
-      
+    const body = document.querySelector('body')
+
     if (open === ' open') {
-      body.style.overflow = 'hidden';
+      body.style.overflow = 'hidden'
     } else {
-      body.style.overflow = '';
+      body.style.overflow = ''
     }
-  }, [open]);
+  }, [open])
 
   useEffect(() => {
     function handleResize() {
-      setOpen('');
+      setOpen('')
     }
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize)
     return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+      window.removeEventListener('resize', handleResize)
+    }
   })
-  
+
   useEffect(() => {
     function handleSwipeStart(e) {
       if (e.touches.length === 1) {
-        const touch = e.touches[0];
-        const startX = touch.pageX;
-        const startY = touch.pageY;
+        const touch = e.touches[0]
+        const startX = touch.pageX
+        const startY = touch.pageY
 
         function handleSwipeMove(e) {
-          const touch = e.touches[0];
-          const deltaX = touch.pageX - startX;
-          const deltaY = touch.pageY - startY;
+          const touch = e.touches[0]
+          const deltaX = touch.pageX - startX
+          const deltaY = touch.pageY - startY
 
           if (deltaX > 50 && Math.abs(deltaY) < 20) {
-            setOpen('');
+            setOpen('')
           }
         }
 
-        window.addEventListener('touchmove', handleSwipeMove);
+        window.addEventListener('touchmove', handleSwipeMove)
 
         function handleSwipeEnd() {
-          window.removeEventListener('touchmove', handleSwipeMove);
-          window.removeEventListener('touchend', handleSwipeEnd);
+          window.removeEventListener('touchmove', handleSwipeMove)
+          window.removeEventListener('touchend', handleSwipeEnd)
         }
 
-        window.addEventListener('touchend', handleSwipeEnd);
+        window.addEventListener('touchend', handleSwipeEnd)
       }
     }
 
-    window.addEventListener('touchstart', handleSwipeStart);
+    window.addEventListener('touchstart', handleSwipeStart)
 
     return () => {
-      window.removeEventListener('touchstart', handleSwipeStart);
-    };
-  }, []);
+      window.removeEventListener('touchstart', handleSwipeStart)
+    }
+  }, [])
 
   return (
     <Popover>
-      <Popover.Button className='focus:outline-none flex justify-center items-center'>
+      <Popover.Button className="focus:outline-none flex justify-center items-center">
         <div className={'menu-btn' + open} onClick={handleMenuToggle}>
           <div className="menu-btn__burger flex justify-center"></div>
         </div>
@@ -82,8 +82,9 @@ const Menu = () => {
   )
 }
 
-export default Menu;
-{/* <div className="lg:hidden">
+export default Menu
+{
+  /* <div className="lg:hidden">
       <div className={'menu-btn' + open} onClick={handleMenuToggle}>
         <div className="menu-btn__burger"></div>
       </div>
@@ -113,4 +114,5 @@ export default Menu;
           </div>
         </div>
       </div>
-    </div> */}
+    </div> */
+}
