@@ -1,5 +1,6 @@
 'use client'
 
+import { Popover } from "@headlessui/react";
 // learn react lazy loading
 // learn react suspensimport { useState } from 'react'
 
@@ -71,7 +72,18 @@ const Menu = () => {
   }, []);
 
   return (
-    <div className="lg:hidden">
+    <Popover>
+      <Popover.Button className='focus:outline-none flex justify-center items-center'>
+        <div className={'menu-btn' + open} onClick={handleMenuToggle}>
+          <div className="menu-btn__burger flex justify-center"></div>
+        </div>
+      </Popover.Button>
+    </Popover>
+  )
+}
+
+export default Menu;
+{/* <div className="lg:hidden">
       <div className={'menu-btn' + open} onClick={handleMenuToggle}>
         <div className="menu-btn__burger"></div>
       </div>
@@ -101,8 +113,4 @@ const Menu = () => {
           </div>
         </div>
       </div>
-    </div>
-  )
-}
-
-export default Menu;
+    </div> */}

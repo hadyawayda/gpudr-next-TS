@@ -36,7 +36,7 @@ const Body = () => {
                 </section>
                 <section className='flex flex-col items-end -mb-40'>
                     <div className='flex flex-col w-5/12'>
-                        <h1 className='animate col-start-1 row-start-2 mt-4 max-w-[36rem] text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl md:text-7xl xl:max-w-[36rem]'>Upgrade your GPU to unlock it&apos;s full potential.</h1>
+                        <h1 className='animate col-start-1 row-start-2 mt-4 max-w-[36rem] text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl md:text-7xl xl:max-w-[36rem]'>Upgrade your GPU to unlock its full potential.</h1>
                         <div className='animate mid mover col-start-1 row-start-1 h-7 text-xl font-semibold mt-8 leading-7 text-sky-500'>Multiple upgrading options are available on our <Link className='underline' href={'/services'}>Services</Link> page.</div>
                     </div>
                 </section>

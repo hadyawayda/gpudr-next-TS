@@ -1,11 +1,12 @@
 import Navbar from '../_components/Navbar';
 import Footer from '../_components/Footer';
+import Menu from '../_components/HamMenu';
 
 const Login = () => {
     return ( <>
-        <Navbar/>
-        <Footer/>    
+        <Menu />
     </> );
 }
  
 export default Login;
+

@@ -118,6 +118,9 @@
 .cart-counter {
   top: 30px;
 }
+.cart-counter-small {
+  font-size: 8px;
+}
 .cart-logo {
   width: 18px;
   height: 18px;
