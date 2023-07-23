@@ -77,7 +77,7 @@ const Footer = () => {
           <p className="animate vlate">FAQ</p>
         </div>
       </div>
-      <div className="flex justify-center w-full px-12 h-96 items-center animate vvlate">
+      <div className="flex justify-center w-full px-12 h-96 items-center animate late">
         <div className="footer-lower-section-wrapper animate py-20 flex items-center lg:h-60 w-full justify-between grow">
           <div className="flex justify-between flex-col-reverse lg:ml-6">
             <p className="copyright-wrapper">2023 © GPU Doctor</p>
