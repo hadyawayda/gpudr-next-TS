@@ -1,8 +1,3 @@
-@font-face {
-  font-family: 'Inter';
-  src: url('../../public/Fonts/Inter/Inter-var.ttf'), format('trueType');
-}
-
 .footer-wrapper {
   width: 100%;
   height: 64vh;
@@ -73,7 +68,6 @@
 .support-wrapper > p,
 .help-wrapper > p,
 .contact-us {
-  font-size: 13px;
   margin: 0;
   padding-bottom: 18px;
 }
@@ -84,8 +78,6 @@
 
 .headings {
   padding-bottom: 15px;
-  font-size: 15px;
-  font-weight: 600;
 }
 /* footer.show {
   transition-delay: 2000ms;

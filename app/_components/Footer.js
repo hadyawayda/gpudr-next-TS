@@ -14,13 +14,13 @@ const Footer = () => {
   }
 
   return (
-    <footer className="footer-wrapper mt-20 lg:px-20 w-full flex flex-col justify-start items-center font-medium text-lg">
+    <footer className="footer-wrapper mt-20 lg:px-20 w-full flex flex-col justify-start items-center">
       <div
         id="top"
         className="flex justify-center md:hidden w-3/4 md:w-full animate m-20">
         <Logos />
       </div>
-      <div className="lg:pt-10 lg:pb-20 flex justify-center py-10 md:py-20 w-full items-start grow flex-wrap flex-row md:flex-nowrap">
+      <div className="lg:pt-10 lg:pb-20 font-medium text-sm flex justify-center py-10 md:py-20 w-full items-start grow flex-wrap flex-row md:flex-nowrap">
         <div className="flex items-center h-24 w-1/2 pl-10 lg:w-4/12 animate">
           <Image
             className="h-12 w-12"
@@ -29,7 +29,9 @@ const Footer = () => {
           />
         </div>
         <div className="index-wrapper pl-12">
-          <h4 className="headings animate">Index</h4>
+          <h4 className="headings mb-4 text-lg font-semibold text-slate-900 animate">
+            Index
+          </h4>
           <p className="animate mid">Home</p>
           <p className="animate late">Services</p>
           <p className="animate vlate" id="mail-in">
@@ -37,13 +39,17 @@ const Footer = () => {
           </p>
         </div>
         <div className="support-wrapper pl-12">
-          <h4 className="headings animate">Support</h4>
+          <h4 className="headings text-lg font-semibold text-slate-900 animate">
+            Support
+          </h4>
           <p className="animate mid">Shipping Policy</p>
           <p className="animate late">Return Policy</p>
           <p className="animate vlate">Privacy Policy</p>
         </div>
         <div className="help-wrapper pl-12">
-          <h4 className="headings animate" id="need-help">
+          <h4
+            className="headings text-lg font-semibold text-slate-900 animate"
+            id="need-help">
             Need Help?
           </h4>
           <div className="contact-us-wrapper animate mid">
