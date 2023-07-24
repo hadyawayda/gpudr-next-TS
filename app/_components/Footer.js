@@ -39,7 +39,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="support-wrapper pl-12">
-          <h4 className="headings text-lg font-semibold text-slate-900 animate">
+          <h4 className="headings mb-4 text-lg font-semibold text-slate-900 animate">
             Support
           </h4>
           <p className="animate mid">Shipping Policy</p>
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
         <div className="help-wrapper pl-12">
           <h4
-            className="headings text-lg font-semibold text-slate-900 animate"
+            className="headings mb-4 text-lg font-semibold text-slate-900 animate"
             id="need-help">
             Need Help?
           </h4>
